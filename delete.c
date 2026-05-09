@@ -121,7 +121,7 @@ void rbDelete(Node *z)
     } else {
         /* --- Case C: two children — use in-order successor ----------- */
         y = rbMinimum(z->right);
-        printf("successor data: %d\n", y->data);
+        printf(BLUE "Successor data: %d\n" RESET, y->data);
         yOrigColor = y->color;
         x          = y->right;
         if (y->parent == z) {
@@ -143,7 +143,7 @@ void rbDelete(Node *z)
     /* Restore RB properties if a BLACK node was removed */
     if (yOrigColor == BLACK)
         rbDeleteFixup(x);
-    printf("Tree After deleting the node:\n");
+    printf(CYAN "Tree After deleting the node:\n" RESET);
     displayTree();
 }
 /*---------------------------------------------------------------------------
@@ -153,12 +153,12 @@ void deleteKey(int key)
 {
     Node *z;
     if (root == NIL) {
-        printf("Tree is empty. Nothing to delete.\n");
+        printf(RED_TEXT "Tree is empty. Nothing to delete.\n" RESET);
         return;
     }
     z = rbSearch(root, key);
     if (z == NIL) {
-        printf("Node (%d) not found in the tree.\n", key);
+        printf(RED_TEXT"Node (%d) not found in the tree.\n" RESET, key);
         return;
     }
     rbDelete(z);

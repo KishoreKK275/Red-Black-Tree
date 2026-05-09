@@ -12,13 +12,13 @@ void deleteMinNode(void)
 {
     Node *minNode;
     if (root == NIL) {
-        printf("Tree is empty. Nothing to delete.\n");
+        printf(RED_TEXT "Tree is empty. Nothing to delete.\n" RESET);
         return;
     }
     minNode = rbMinimum(root);
-    printf("Tree Before deleting the minimum node:\n");
+    printf( CYAN "Tree Before deleting the minimum node:\n" RESET);
     displayTree();
     rbDelete(minNode);
-    printf("Tree After deleting the minimum node:\n");
+    printf(GREEN "Tree After deleting the minimum node:\n" RESET);
     displayTree();
 }

@@ -12,13 +12,13 @@ void deleteMaxNode(void)
 {
     Node *maxNode;
     if (root == NIL) {
-        printf("Tree is empty. Nothing to delete.\n");
+        printf(RED_TEXT"Tree is empty. Nothing to delete.\n" RESET);
         return;
     }
     maxNode = rbMaximum(root);
-    printf("Tree Before deleting the maximum node:\n");
+    printf(CYAN "Tree Before deleting the maximum node:\n" RESET);
     displayTree();
     rbDelete(maxNode);
-    printf("Tree After deleting the maximum node:\n");
+    printf(GREEN "Tree After deleting the maximum node:\n" RESET);
     displayTree();
 }

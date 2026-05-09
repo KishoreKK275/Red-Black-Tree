@@ -78,7 +78,7 @@ void rbInsert(int data)
         else if (z->data > x->data)
             x = x->right;
         else if (z->data == x->data) {
-            printf("Duplicate not allowed\n");
+            printf(RED_TEXT "Duplicate not allowed\n" RESET);
             return;
         }
     }
@@ -94,14 +94,14 @@ void rbInsert(int data)
     z->color = RED;
     /* --- Print tree BEFORE fixup (only when tree had nodes before) ----- */
     if (y != NIL) {
-        printf("Before Balancing Red Black Tree is:\n");
+        printf(BLUE "\nBefore Balancing Red Black Tree is:\n" RESET);
         displayTree();
     }
     /* --- Restore RB properties ----------------------------------------- */
     rbInsertFixup(z);
     /* --- Print tree AFTER fixup (only when tree had nodes before) ------ */
     if (y != NIL) {
-        printf("Now Tree is balance\n");
+        printf(MAGENTA "Now Tree is balance\n" RESET);
         displayTree();
     }
 }

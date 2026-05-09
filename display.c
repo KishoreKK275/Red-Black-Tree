@@ -19,8 +19,7 @@ void printTree(Node *node, int space)
     printf("\n");
     for (int i = 6; i < space; i++)
         printf(" ");
-    printf("%d(%s)\n", node->data,
-           node->color == RED ? "R" : "B");
+    printf("%s%d(%s)%s\n",node->color == RED ? RED_TEXT : BLACK_TEXT,node->data,node->color == RED ? "R" : "B",RESET);
     // Print left subtree
     printTree(node->left, space);
 }
@@ -30,11 +29,11 @@ void printTree(Node *node, int space)
 void displayTree(void)
 {
     if (root == NIL) {
-        printf("Tree is empty.\n");
+        printf(RED_TEXT "Tree is empty.\n" RESET);
         return;
     }
 
-    printf("\nRed-Black Tree Structure:\n");
+    printf(GREEN "\nRed-Black Tree Structure:\n" RESET);
     printTree(root, 0);
     printf("\n");
 }
