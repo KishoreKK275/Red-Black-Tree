@@ -18,7 +18,7 @@ Implements all core RB operations with vivid ANSI terminal colors, live before/a
 [![Standard](https://img.shields.io/badge/Standard-C99-orange?style=for-the-badge)](https://en.wikipedia.org/wiki/C99)
 [![Build](https://img.shields.io/badge/Build-Makefile-brightgreen?style=for-the-badge&logo=gnu)](https://www.gnu.org/software/make/)
 [![Reference](https://img.shields.io/badge/Reference-CLRS_Ch.13-red?style=for-the-badge)](https://en.wikipedia.org/wiki/Introduction_to_Algorithms)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+
 
 </div>
 
@@ -117,7 +117,7 @@ Red-Black-Tree/
 ### One-Command Build & Run
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Red-Black-Tree.git
+git clone https://github.com/KishoreKK275/Red-Black-Tree.git
 cd Red-Black-Tree
 make run
 ```
@@ -128,6 +128,7 @@ make run
 make                  # compiles → produces ./red_black_tree
 ./red_black_tree      # run the program
 make clean            # remove all .o files and executable
+make run              # compiles → produces ./red_black_tree → run the program
 ```
 
 ### Without make (manual)
@@ -451,7 +452,7 @@ Try this sequence right after running to see all features:
 **Kishore Kasireddy**  
 📧 [kishorekasireddi4@gmail.com](mailto:kishorekasireddi4@gmail.com)  
 🔗 [LinkedIn](https://linkedin.com/in/kishore-kasireddy)  
-🐙 [GitHub](https://github.com/KishoreKK)
+🐙 [GitHub](https://github.com/KishoreKK275)
 
 ---
 
